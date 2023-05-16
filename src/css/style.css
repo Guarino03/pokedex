@@ -1,0 +1,156 @@
+:root{
+    --fundo-lm:#5e5b5bad;
+    --texto-lm:#333333;
+    --card-lm:#d8e3ec;
+    --fundo-dm:#212121;
+    --texto-dm:#f5f5f5;
+    --card-dm:#a8a8a8;
+    --card-hover:#96d9d6;
+    --plant:#7ac74c;
+    --poison:#df67ddfb;
+    --fire:#ee8130;
+    --water:#6390f0;
+    --insect:#a6b91a;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: var(--fundo-lm);
+    color: var(--texto-lm);
+}
+
+body.dark-mode{
+    background-color: var(--fundo-dm);
+    color: var(--texto-dm);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    /* margin: auto; */
+}
+
+header .logo, header .img-button{
+    width: 15px;
+    padding: 0;
+    margin: 0;
+    transition: 0.2s ease-in-out;
+    animation: reverse;
+}
+
+header button{
+    background: none;
+    border: none;
+}
+
+/* header #theme-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+} */
+
+header img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+main{
+    padding: 25px;
+}
+
+main .pokemon-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+main .card{
+    background-color: var(--card-lm);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+main .card:hover{
+    transform:scale(1.05) ;
+    background-color: var(--card-hover);
+    cursor: pointer;
+}
+
+.dark-mode .card{
+    background-color: var(--card-dm);
+}
+
+main .card .info{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+
+main .card .info span{
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 5px;
+}
+
+main .card .gif{
+    width: 70px;
+    height: 70px;
+}
+
+main .card .type{
+    gap: 15px;
+    display: flex;
+}
+
+.plant{
+    background-color: var(--plant);
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 0px 3px;
+}
+
+.poison{
+    background-color: var(--poison);
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 0px 3px;
+}
+
+.fire{
+    background-color: var(--fire);
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 0px 3px;
+}
+
+.water{
+    background-color: var(--water);
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 0px 3px;
+}
+
+.insect{
+    background-color: var(--insect);
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 0px 3px;
+}
+
+main .info-pokemon{
+    max-height: 100px;
+    overflow-y: scroll;
+    font-size: 14px;
+    padding-right: 10px;
+}
